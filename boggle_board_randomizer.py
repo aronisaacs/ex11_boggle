@@ -28,7 +28,7 @@ LETTERS = [
     ['N', 'U', 'I', 'H', 'M', 'QU']
 ]
 
-mayer = "is_awesome"
+
 
 def randomize_board(dice_list: List[List[str]] = LETTERS) -> List[List[str]]:
     """
