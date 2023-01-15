@@ -35,7 +35,6 @@ class BoggleRoundController:
     def create_button_cmd(self, button_cell: tuple[int]) -> Callable:
         def fun() -> None:
             current_path = self._model.get_current_path()
-            print(button_cell)
             if self._model.path_checking_reaction(self.board[button_cell[0]][button_cell[1]], button_cell):
                 self.board_gui.set_display(self._model.get_current_substring())
                 self.board_gui.set_score(
@@ -87,7 +86,6 @@ if __name__ == "__main__":
         round = BoggleRoundController(words_dict)
         final_score = round.final_score
         after = BoggleBetweenController(final_score)
-        print(after.users_choice)
         if after.users_choice == QUIT:
             game_on = False
         else:

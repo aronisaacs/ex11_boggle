@@ -96,7 +96,10 @@ class BoggleBoardGui:
                     columnspan=1, sticky=tki.NSEW)
 
         def change_color(color: str) -> None:
+            print("chanigs")
+            print(button["background"])
             button["background"] = color
+            print(button["background"])
         button.change_color = change_color
         return button
 

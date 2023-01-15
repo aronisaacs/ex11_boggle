@@ -25,7 +25,6 @@ class BoggleModel:
 
     def path_checking_reaction(self, letter, coordinate) -> bool:
         # This function is called whenever any button is pressed.
-        print(self.path)
         if check_if_legal_path(self.__board, self.path + [coordinate]):
             self.path.append(coordinate)
             self.substring += letter
