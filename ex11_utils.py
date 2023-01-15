@@ -56,6 +56,8 @@ def check_if_legal_path(board: Board, path: Path) -> bool:
     This functions check if a certain given path is legal: Note that it does not check to see if
     the associated word is in the dictionary or not.
     '''
+    if not path:
+        return True
     if path_intersects(path):
         return False 
     path_length =len(path)
@@ -77,8 +79,11 @@ def is_valid_path(board: Board, path: Path, words: Iterable[str]) -> Optional[st
     Note that this is one of the required functions, and may be tested by itself: since it tests only one word, it
     isn't worth it to convert the list into an ordered list in order to implement binary search.
     '''
-    candidate_word = path_to_word(path, board)
-    return candidate_word*(check_if_legal_path(board,path) and candidate_word in words) 
+    if check_if_legal_path(board,path):
+        candidate_word = path_to_word(path, board)
+        if candidate_word in words:
+            return candidate_word
+    return None
 
 #################################################################################################################
 # Note THAT UP UNTIL THIS POINT, ALL OF THE FUNCTIONS HAVE BEEN TO ENABLE THIS LAST FUNCTION is_valid_path.
