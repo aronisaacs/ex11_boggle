@@ -70,7 +70,7 @@ def check_if_legal_path(board: Board, path: Path) -> bool:
 
 
 
-def is_valid_word_path(board: Board, path: Path, words: Iterable[str]) -> Optional[str]:
+def is_valid_path(board: Board, path: Path, words: Iterable[str]) -> Optional[str]:
     '''
     This function checks to see if a given path is both legal and represents a legal word in the dictionary.
     If both of these are true, it returns True; otherwise, it returns false.
@@ -81,7 +81,7 @@ def is_valid_word_path(board: Board, path: Path, words: Iterable[str]) -> Option
     return candidate_word*(check_if_legal_path(board,path) and candidate_word in words) 
 
 #################################################################################################################
-# Note THAT UP UNTIL THIS POINT, ALL OF THE FUNCTIONS HAVE BEEN TO ENABLE THIS LAST FUNCTION is_valid_word_path.
+# Note THAT UP UNTIL THIS POINT, ALL OF THE FUNCTIONS HAVE BEEN TO ENABLE THIS LAST FUNCTION is_valid_path.
 # HOWEVER, ALL OF THE ABOVE FUNCTIONS ARE NOT USED FOR THE THREE FUNCTIONS AHEAD THAT USE BACKTRACKING.
 ##################################################################################################################
 

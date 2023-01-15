@@ -70,10 +70,10 @@ def test_check_if_legal_path():
 	assert not check_if_legal_path(EXAMPLE_BOARD, [(1,1),(0,0),(1,0),(2,0),(3,0),(4,0)])
 
 def test_is_valid_word_path():
-	assert is_valid_word_path(EXAMPLE_BOARD, [(0,2), (1,3), (2,2), (3,2)], WORD_SET)
-	assert is_valid_word_path(EXAMPLE_BOARD, [(3,1), (2,1), (1,1), (2,2)], WORD_SET)
-	assert not is_valid_word_path(EXAMPLE_BOARD, [(3,1), (2,1), (1,1), (1,2)], WORD_SET)
-	assert not is_valid_word_path(EXAMPLE_BOARD, [(0,3), (2,1), (0,1)], WORD_SET)
+	assert is_valid_path(EXAMPLE_BOARD, [(0,2), (1,3), (2,2), (3,2)], WORD_SET)
+	assert is_valid_path(EXAMPLE_BOARD, [(3,1), (2,1), (1,1), (2,2)], WORD_SET)
+	assert not is_valid_path(EXAMPLE_BOARD, [(3,1), (2,1), (1,1), (1,2)], WORD_SET)
+	assert not is_valid_path(EXAMPLE_BOARD, [(0,3), (2,1), (0,1)], WORD_SET)
 
 
 def test_sort_words_alphebetically():

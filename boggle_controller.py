@@ -1,4 +1,4 @@
-from boogle_board_gui import BoggleBoardGui
+from boggle_board_gui import BoggleBoardGui
 import tkinter as tki
 from typing import Callable, Dict, List, Any
 from boggle_board_randomizer import *
@@ -82,13 +82,13 @@ if __name__ == "__main__":
     after = BoggleBetweenController(0, True)
     if after.users_choice == QUIT:
         game_on = False
-while game_on:
-    game_on = False
-    round = BoggleRoundController(words_dict)
-    final_score = round.final_score
-    after = BoggleBetweenController(final_score)
-    print(after.users_choice)
-    if after.users_choice == QUIT:
+    while game_on:
         game_on = False
-    else:
-        game_on = True
+        round = BoggleRoundController(words_dict)
+        final_score = round.final_score
+        after = BoggleBetweenController(final_score)
+        print(after.users_choice)
+        if after.users_choice == QUIT:
+            game_on = False
+        else:
+            game_on = True
